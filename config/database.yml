@@ -16,14 +16,13 @@ default: &default
   username: root
   password: password
   host: db
-  socket: /tmp/mysql.sock
 
 development:
   <<: *default
   adapter: mysql2
   username: root
-  password:
-  host: localhost
+  password: password
+  host: db
   database: protospace_39122_development
 
 # Warning: The database defined as "test" will be erased and
@@ -33,7 +32,7 @@ test:
   <<: *default
   adapter: mysql2
   username: root
-  password:
+  password: password
   host: localhost
   database: protospace_39122_test
 
